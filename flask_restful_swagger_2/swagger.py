@@ -37,7 +37,7 @@ def create_swagger_endpoint(swagger_object):
         def get(self):
             swagger_doc = {}
             # filter keys with empty values
-            for k, v in swagger_object.items():
+            for k, v in swagger_object._swagger_object.items():
                 if v or k == 'paths':
                     if k == 'paths':
                         paths = {}
